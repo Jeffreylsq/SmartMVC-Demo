@@ -7,6 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import cn.tedu.dao.EmpDao;
 import cn.tedu.entity.Emp;
 
+/**
+ * 
+ * @author Tianyu Wei
+ *
+ */
 public class EmpController {
 	
 	private EmpDao dao=new EmpDao();

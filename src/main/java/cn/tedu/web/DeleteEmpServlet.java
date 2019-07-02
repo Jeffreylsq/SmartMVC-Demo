@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import cn.tedu.dao.EmpDao;
 
 /**
- * ´¦ÀíÉ¾³ýÔ±¹¤ÇëÇó
+ * @author Tianyu Wei
  */
 public class DeleteEmpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -22,12 +22,12 @@ public class DeleteEmpServlet extends HttpServlet {
 		EmpDao dao = new EmpDao();
 		int n = dao.deleteEmp(empno);
 		if(n==1) {
-			System.out.println("É¾³ý³É¹¦£¡");
+			System.out.println("É¾ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 			response.sendRedirect("listEmp"); 
 			return;
 		}else {
-			System.out.println("É¾³ýÊ§°Ü£¡");
-			request.setAttribute("message", "É¾³ýÊ§°Ü£¡");
+			System.out.println("É¾ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
+			request.setAttribute("message", "É¾ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 			request.getRequestDispatcher(
 					"/WEB-INF/jsp/msg.jsp");
 		}

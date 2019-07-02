@@ -12,28 +12,28 @@ import cn.tedu.dao.EmpDao;
 import cn.tedu.entity.Emp;
 
 /**
- * ÏÔÊ¾±à¼­EmpÐÅÏ¢µÄÒ³Ãæ
+ *@author Tianyu Wei
  */
 public class EditEmpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		//»ñÈ¡Ô±¹¤±àºÅ
+		//ï¿½ï¿½È¡Ô±ï¿½ï¿½ï¿½ï¿½ï¿½
 		String str = request.getParameter("empno");
 		Integer empno = Integer.parseInt(str);
-		//¸ù¾ÝÔ±¹¤±àºÅ£¬²éÑ¯Ô±¹¤ÐÅÏ¢
+		//ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½Ñ¯Ô±ï¿½ï¿½ï¿½ï¿½Ï¢
 		EmpDao dao = new EmpDao();
 		Emp emp = dao.findEmpByEmpno(empno);
 		List<String> jobs = dao.findJobs();
 		List<Emp> managers = dao.findAll();
 		
-		//ÀûÓÃrequest¶ÔÏó½«emp´«ËÍµ½JSPÒ³ÃæÖÐ
+		//ï¿½ï¿½ï¿½ï¿½requestï¿½ï¿½ï¿½ï¿½empï¿½ï¿½ï¿½Íµï¿½JSPÒ³ï¿½ï¿½ï¿½ï¿½
 		request.setAttribute("emp", emp); 
 		request.setAttribute("jobs", jobs); 
 		request.setAttribute("managers", managers); 
 			
-		//×ª·¢µ½JSPÏÔÊ¾µ±Ç°±»±à¼­Ô±¹¤ÐÅÏ¢
+		//×ªï¿½ï¿½ï¿½ï¿½JSPï¿½ï¿½Ê¾ï¿½ï¿½Ç°ï¿½ï¿½ï¿½à¼­Ô±ï¿½ï¿½ï¿½ï¿½Ï¢
 		request.getRequestDispatcher(
 				"/WEB-INF/jsp/edit-emp.jsp")
 				.forward(request, response); 

@@ -5,6 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 import cn.tedu.dao.UserDao;
 import cn.tedu.entity.User;
 
+/**
+ * 
+ * @author Tianyu Wei
+ *
+ */
 public class UserController {
 	
 	private UserDao dao=new UserDao();

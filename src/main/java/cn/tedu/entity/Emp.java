@@ -13,6 +13,7 @@ import java.sql.Date;
 	SAL
 	COMM
 	DEPTNO
+	@author Tianyu Wei
  *
  */
 public class Emp {

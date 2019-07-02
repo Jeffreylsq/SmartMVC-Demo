@@ -13,7 +13,7 @@ import cn.tedu.dao.EmpDao;
 import cn.tedu.entity.Emp;
 
 /**
- * ÀûÓÃServletÓëJSPĞ­×÷ÏÔÊ¾Ô±¹¤ÁĞ±í
+ * @author Tianyu Wei
  */
 public class ListEmpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,10 +24,10 @@ public class ListEmpServlet extends HttpServlet {
 		EmpDao dao = new EmpDao();
 		List<Emp> list = dao.findAll();
 		
-		//ÀûÓÃrequest¶ÔÏóÏòJSP´«ËÍ¼ÆËã½á¹û
+		//ï¿½ï¿½ï¿½ï¿½requestï¿½ï¿½ï¿½ï¿½ï¿½ï¿½JSPï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½
 		request.setAttribute("list", list); 
 		
-		//×ª·¢µ½JSPÒ³ÃæÏÔÊ¾½á¹û list-emp.jsp
+		//×ªï¿½ï¿½ï¿½ï¿½JSPÒ³ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ list-emp.jsp
 		RequestDispatcher rd=request.getRequestDispatcher(
 				"/WEB-INF/jsp/list.jsp");
 		rd.forward(request, response); 

@@ -6,6 +6,11 @@ import static java.lang.annotation.ElementType.METHOD;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+/**
+ * 
+ * @author Tianyu Wei
+ *
+ */
 @Retention(RUNTIME)
 @Target(METHOD)
 public @interface RequestMapping {

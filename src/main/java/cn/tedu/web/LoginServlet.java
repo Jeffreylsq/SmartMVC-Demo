@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import cn.tedu.dao.UserDao;
 
+/**
+ * 
+ * @author Tianyu Wei
+ *
+ */
 public class LoginServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
